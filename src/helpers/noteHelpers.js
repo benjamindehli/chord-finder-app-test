@@ -31,3 +31,9 @@ export const getSelectedNoteNumbersFromNotes = notes => {
     return note.number;
   });
 }
+
+export const getSelectedNotes = notes => {
+  return notes.filter(note => {
+    return note.selected;
+  });
+}
