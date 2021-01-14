@@ -19,6 +19,7 @@ import SelectedSelectionTypeReducer from 'reducers/SelectedSelectionTypeReducer'
 import SelectionTypesReducer from 'reducers/SelectionTypesReducer';
 import SettingsGuitarReducer from 'reducers/SettingsGuitarReducer';
 import SettingsKeyboardReducer from 'reducers/SettingsKeyboardReducer';
+import SynthesizerReducer from 'reducers/SynthesizerReducer';
 
 const reducers = history => combineReducers({
   router: connectRouter(history),
@@ -37,7 +38,8 @@ const reducers = history => combineReducers({
   selectedSelectionType: SelectedSelectionTypeReducer,
   selectionTypes: SelectionTypesReducer,
   settingsGuitar: SettingsGuitarReducer,
-  settingsKeyboard: SettingsKeyboardReducer
+  settingsKeyboard: SettingsKeyboardReducer,
+  synthesizer: SynthesizerReducer
 });
 
 export default reducers;
