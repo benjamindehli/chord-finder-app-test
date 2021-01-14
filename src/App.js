@@ -21,8 +21,11 @@ import NotFound from 'components/routes/NotFound';
 import MainAppBar from 'components/partials/MainAppBar';
 import Footer from 'components/partials/Footer';
 
-//InputControllers
+// InputControllers
 import ComputerKeyboardInput from 'components/inputControllers/ComputerKeyboardInput';
+
+// OutputAudio
+import Synthesizer from 'components/outputAudio/Synthesizer';
 
 // Stylesheets
 import style from 'App.module.scss';
@@ -44,6 +47,7 @@ class App extends Component {
         <CssBaseline />
         <ThemeProvider theme={theme}>
           <ComputerKeyboardInput />
+          <Synthesizer />
           <MainAppBar />
           <div className={style.app}>
             <Switch>
