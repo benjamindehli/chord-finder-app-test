@@ -29,6 +29,9 @@ class ComputerKeyboardInput extends Component {
   }
 
   keyDownFunction(event) {
+    if (!this.props.computerKeyboardInputEnabled){
+      return false;
+    }
     const keyNumber = this.props.keyCodeNoteNumbers[event.keyCode];
     if(typeof keyNumber === 'number'){
       const note = getNoteByNoteNumber(this.props.notes, keyNumber);
@@ -50,7 +53,8 @@ const mapStateToProps = state => ({
   scales: state.scales,
   selectedSelectionType: state.selectedSelectionType,
   selectedKeyNumber: state.selectedKeyNumber,
-  keyCodeNoteNumbers: state.keyCodeNoteNumbers
+  keyCodeNoteNumbers: state.keyCodeNoteNumbers,
+  computerKeyboardInputEnabled: state.computerKeyboardInputEnabled
 });
 
 const mapDispatchToProps = {
